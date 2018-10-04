@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+
+	<script>
+	function googleError(){
+      document.getElementById('map-error').innerHTML = "Error in Map!"
+    }</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgTYsAMYDANytrjR_Ha78whazVd7Tu_6c&callback=initMap" async defer onerror="googleError()"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="knockout-3.4.2.js"></script>
+
+    <!-- <script type="text/javascript" src="KOjs.js"></script> -->
+        
+
+    <link rel="stylesheet" href="KOcss.css">
+
+    <title>Neighborhood Map</title>
+</head>
+
+    <body>
+
+        <div class="container">
+            <div class="col-md-12">
+                <input class="search" type="search" placeholder="Filter Location" size="35" font-size="0.9em" data-bind="textInput: query, valueUpdate: 'keyup'" /></div>
+                <div class="col-md-4">
+                    <div class="list-view" data-bind="foreach: search" area-expanded="true">
+                        <p class="list-item" data-bind="text: $data.name, click: listViewClick"></p>
+                    </div>
+                </div>
+            </div>
+        <div id="map" class="col-md-8"></div>
+
+        <script type="text/javascript" src="KOjs.js"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgTYsAMYDANytrjR_Ha78whazVd7Tu_6c&callback=initMap" async defer></script> -->
+    
+    </body>
+</html>
