@@ -13,5 +13,5 @@ A single page application featuring a map of a neighborhood you would like to vi
 - Clone Repository or Download the project zip file.
 - Open 'index.html' and enjoy!
 
-You can see the project on: https://github.com/HinaRana/Map-Project.git
+You can see the project on: https://hinarana.github.io/Map-Project/
 
